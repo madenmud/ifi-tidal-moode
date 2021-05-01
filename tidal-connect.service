@@ -1,0 +1,14 @@
+[Unit]
+Description=Tidal Connect Service
+
+[Service]
+Restart=on-failure
+WorkingDirectory=/opt/tidal-connect
+ExecStart=/opt/tidal-connect/start.sh
+User=root
+Group=root
+RestartSec=1
+KillMode=control-group
+
+[Install]
+WantedBy=multi-user.target
