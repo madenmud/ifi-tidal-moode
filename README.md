@@ -12,8 +12,11 @@ The application has been tested on Moode audio OS, but it should also work on ot
 ### Configure playback device
 Most probably your playback device name differes from preconfigured in 'start.sh' script (USB Audio: - (hw:2,0)).
 Check start script output log which lists available playback devices. Find desired device name and copy/paste it to the "start.sh".
-Run ``` ./start.sh ``` script again and check if playback is working.
+Run ```sudo ./start.sh ``` script again and check if playback is working.
 
 ## Install (run application as a service)
 1. SSH to rPI and navigate to the folder containing repository files.
 2. Run ```sudo make install```, which should copy current folder content to the "/opt/tidal-connect" folder, configure systemd unit and start a Tidal connect service.
+
+## TODO:
+Remove duplicated libraries from 'lib' folder.
