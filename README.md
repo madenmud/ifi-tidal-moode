@@ -9,7 +9,7 @@ The application has been tested on Moode audio OS, but it should also work on ot
 2. Download repository content and navigate to folder:
 ```
 wget -c "https://github.com/vcucek/ifi-tidal-moode/archive/refs/heads/master.zip" -O - | busybox unzip -
-cd ifi-tidal-moode
+cd ifi-tidal-moode-master
 ```
 3. Configure playback audio device:
 ``` make ```
