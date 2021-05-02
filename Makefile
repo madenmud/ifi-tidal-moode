@@ -1,6 +1,9 @@
 PREFIX = /opt
 
 configure:
+	chmod +x ./bin/tidal_connect_application
+        chmod +x ./select-device.sh
+        chmod +x ./start.sh
 	./select-device.sh
 
 .PHONY: install
