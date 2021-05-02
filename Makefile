@@ -1,5 +1,8 @@
 PREFIX = /opt
 
+configure:
+	./select-device.sh
+
 .PHONY: install
 install: bin/tidal_connect_application
 	install -d $(DESTDIR)$(PREFIX)/tidal-connect/
@@ -14,5 +17,5 @@ install: bin/tidal_connect_application
 uninstall:
 	systemctl stop tidal-connect.service
 	systemctl disable tidal-connect.service
-	rm -rf $(DESTDIR)$(PREFIX)/tidal-connect
+	rm -f $(DESTDIR)$(PREFIX)/tidal-connect
 	rm /lib/systemd/system/tidal-connect.service

@@ -1,5 +1,7 @@
 #!/bin/bash
+
 export LD_LIBRARY_PATH=$PWD/lib
+DEVICE="USB Audio: - (hw:2,0)"
 ./bin/tidal_connect_application \
 	--tc-certificate-path "./id_certificate/IfiAudio_ZenStream.dat" \
 	--netif-for-deviceid eth0 \
@@ -10,5 +12,5 @@ export LD_LIBRARY_PATH=$PWD/lib
 	--disable-app-security false \
 	--disable-web-security false \
 	--enable-mqa-passthrough false \
-	--playback-device "USB Audio: - (hw:2,0)" \
-	--log-level 4 
+	--playback-device "$DEVICE" \
+	--log-level 1 
