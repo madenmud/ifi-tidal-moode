@@ -2,7 +2,6 @@
 
 export LD_LIBRARY_PATH=$PWD/lib
 
-#DEVICES=$(./select-device.sh | sed "s/Valid devices are: //")
 DEVICES=$(bin/tidal_connect_application \
 		--tc-certificate-path "./id_certificate/IfiAudio_ZenStream.dat" \
 		--netif-for-deviceid eth0 \
@@ -15,7 +14,7 @@ DEVICES=$(bin/tidal_connect_application \
 		--enable-mqa-passthrough false \
 		--playback-device "<device>" \
 		--log-level 4 2>&1 | grep "Valid" -m 1 --line-buffered | sed "s/Valid devices are: //")
-#read -r -a DEVICES_ARRAY <<< "$DEVICES"
+
 eval "DEVICES_ARRAY=($DEVICES)"
 
 PS3='Please select playback device: '
