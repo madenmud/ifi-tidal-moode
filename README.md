@@ -6,9 +6,12 @@ The application has been tested on Moode audio OS, but it should also work on ot
 ## Test run
 1. SSH to rPI:
 ``` ssh pi@moode.local ```
-2. Download repository content and navigate to folder:
+2. Download and unzip repository content:
 ```
 wget -c "https://github.com/vcucek/ifi-tidal-moode/archive/refs/heads/master.zip" -O - | busybox unzip -
+```
+3. Navigate to folder:
+```
 cd ifi-tidal-moode-master
 ```
 3. Configure playback audio device:
@@ -17,7 +20,7 @@ cd ifi-tidal-moode-master
 ```sudo ./start.sh ```
 
 ## Install (run application as a service)
-Run ```sudo make install```, which should copy current folder content to the "/opt/tidal-connect" folder, configure systemd unit and start a Tidal connect service.
+Run ```sudo make install``` to copy repository content to the "/opt/tidal-connect" folder, configure systemd unit and start a Tidal connect service.
 
 ## TODO:
 Remove duplicated libraries from 'lib' folder.
