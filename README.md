@@ -20,7 +20,10 @@ cd ifi-tidal-moode-master
 ```sudo ./start.sh ```
 
 ## Install (run application as a service)
-Run ```sudo make install``` to copy repository content to the "/opt/tidal-connect" folder, configure systemd unit and start a Tidal connect service.
+1. Configure playback output device
+``` sudo make ```
+3. Copy repository content to the "/opt/tidal-connect" folder, configure systemd unit and start a Tidal connect service.
+``` sudo make install ```
 
 ## TODO:
 Remove duplicated libraries from 'lib' folder.
