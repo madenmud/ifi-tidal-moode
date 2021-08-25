@@ -20,5 +20,5 @@ install: bin/tidal_connect_application
 uninstall:
 	systemctl stop tidal-connect.service
 	systemctl disable tidal-connect.service
-	rm -f $(DESTDIR)$(PREFIX)/tidal-connect
+	rm -rf $(DESTDIR)$(PREFIX)/tidal-connect
 	rm /lib/systemd/system/tidal-connect.service
